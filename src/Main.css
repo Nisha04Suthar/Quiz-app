@@ -2,20 +2,28 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #d6ccc2;
+    background: url(./image/back.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+*{
+    box-sizing:border-box;
 }
 
 .quiz-card{
-    height: 50vh;
+    height: 60vh;
     width: 35vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #d5bdaf;
-    border: 2px solid black;
+    border:2px solid black;
     border-radius: 10px;
     padding: 20px;
 }
@@ -40,10 +48,14 @@ body, html {
     border: 1px solid #403d39;
     padding: 0 10px;
     align-content: center;
+    background-color: #d6ccc2;
 }
 
 .btn{
     margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 button{
@@ -57,4 +69,23 @@ button{
 
 button:hover{
     cursor: pointer;
+    border: none;
+    box-shadow: 0 0 4px whitesmoke;
+}
+
+.correct{
+    background-color: #4caf50;
+    color: white;
+    border: 2px solid #388e3c;
+}
+
+.wrong{
+    background-color: #f44336;
+    color: white;
+    border: 2px solid #d32f2f;
+}
+
+.option:hover{
+    cursor: pointer;
+    background-color: #593d3ba3;
 }
