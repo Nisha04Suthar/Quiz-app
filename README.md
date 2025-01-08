@@ -1,5 +1,6 @@
-![image](https://github.com/user-attachments/assets/dc2f1a39-8a14-45da-b6bb-12843d13bfab)
+**Quiz-app Preview**
 
+![image](https://github.com/user-attachments/assets/dc2f1a39-8a14-45da-b6bb-12843d13bfab)
 
 # Getting Started with Create React App
 
