@@ -1,11 +1,6 @@
 <<<<<<< HEAD
 **Quiz-app Preview**
-
-![image](https://github.com/user-attachments/assets/dc2f1a39-8a14-45da-b6bb-12843d13bfab)
-
-=======
-![image](https://github.com/user-attachments/assets/dc2f1a39-8a14-45da-b6bb-12843d13bfab)
-
+![image](https://github.com/user-attachments/assets/92fd8768-2c2c-4686-8b23-252da72b63af)
 
 >>>>>>> 9ab1ea4 (Update README.md)
 # Getting Started with Create React App
