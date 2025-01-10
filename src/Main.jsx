@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useRef} from 'react'
 import './Main.css'
 import data from './assets/data'
 
@@ -9,19 +9,21 @@ function Main() {
   const [isCorrect, setIsCorrect] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
   const [timeLeft, setTimeLeft] = useState(120); 
+  const [showMessage, setShowMessage] = useState(false); // State for showing the message
+  const timerRef = useRef(null);
 
   useEffect(() => {
-    if (timeLeft > 0) {
-      const timer = setTimeout(() => {
+    if (timeLeft > 0 && !showMessage) {
+      timerRef.current = setTimeout(() => {
         setTimeLeft(timeLeft - 1);
       }, 1000); // Update every second
-  
-      return () => clearTimeout(timer); // Cleanup on unmount
     } else {
       // Handle timer completion (e.g., end the quiz)
-      alert("Time's up!");
+      // alert("Time's up!");
+      setShowMessage(true);
     }
-  }, [timeLeft]);
+    return () => clearTimeout(timerRef.current); // Cleanup on unmount
+  }, [timeLeft,showMessage]);
 
   const NextQuestion = () =>{
     const newIndex = index+1;
@@ -48,8 +50,24 @@ function Main() {
     setIsCorrect(question.answer.includes(option));
   }
 
+  const handleSubmit = () => {
+    // Handle submission logic (e.g., calculate score, show results)
+    clearTimeout(timerRef.current);
+    setShowMessage(true);
+  };
+
   return (
-    <>  
+    <>
+      {showMessage ? (
+        // Full-page message
+        <div className="full-page-message">
+          <h2>Quiz Completed! 🎉</h2>
+          😊
+          <p>Thank you for taking the quiz.</p>
+        </div>
+        ) : (
+        // Quiz content
+        <>  
           <div className="timer">
             Time Left: {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, '0')}
           </div>
@@ -75,9 +93,11 @@ function Main() {
               <div className="btn">
                 <button onClick={PrevQuestion}>Prev</button>
                 <p>{index+1} of {data.length} questions</p>
-                <button onClick={NextQuestion}>Next</button>
+                {index === data.length-1?(<button onClick={handleSubmit}>Submit</button>):(<button onClick={NextQuestion}>Next</button>)}
               </div>
           </div>
+        </>
+      )}
     </>
   )
 }
