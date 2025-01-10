@@ -16,6 +16,15 @@ body, html {
     box-sizing:border-box;
 }
 
+.timer {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
 .quiz-card{
     height: 60vh;
     width: 35vw;
@@ -73,19 +82,19 @@ button:hover{
     box-shadow: 0 0 4px whitesmoke;
 }
 
-.correct{
+.option:hover{
+    cursor: pointer;
+    background-color: #593d3ba3;
+}
+
+.option.correct{
     background-color: #4caf50;
     color: white;
     border: 2px solid #388e3c;
 }
 
-.wrong{
+.option.wrong{
     background-color: #f44336;
     color: white;
     border: 2px solid #d32f2f;
-}
-
-.option:hover{
-    cursor: pointer;
-    background-color: #593d3ba3;
 }

@@ -7,9 +7,9 @@ const data = [
     },
     {
         id: 2,
-        question: "Which country will host the 2026 FIFA World Cup?",
-        options: ["Qatar", "USA", "Canada", "Mexico"],
-        answer: "USA, Canada, and Mexico"
+        question: "Which protocol is used to send emails?",
+        options: ["HTTP", "SMTP", "FTP", "IMAP"],
+        answer: "SMTP"
     },
     {
         id: 3,
