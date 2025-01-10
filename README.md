@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 **Quiz-app Preview**
+
 ![image](https://github.com/user-attachments/assets/92fd8768-2c2c-4686-8b23-252da72b63af)
 
->>>>>>> 9ab1ea4 (Update README.md)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
